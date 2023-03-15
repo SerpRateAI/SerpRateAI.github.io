@@ -1,4 +1,5 @@
-# SerpRateAI.github.io
+![SerpRateAI logo](assets/serprateai-logo.png?raw=true "SerpRateAI")
+
 
 SerpRateAI is a Norwegian Research Council funded (No. 334395) to investigate the physical mechanisms that drive peridotite alteration.
 
