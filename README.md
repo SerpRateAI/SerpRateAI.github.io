@@ -1,5 +1,4 @@
-# title
-<!-- ![SerpRateAI logo](/assets/serprateai-logo.png?raw=true "SerpRateAI") -->
+![SerpRateAI logo](/assets/serprateai-logo.png?raw=true "SerpRateAI")
 
 
 SerpRateAI is a Norwegian Research Council funded (No. 334395) to investigate the physical mechanisms that drive peridotite alteration.
@@ -12,7 +11,7 @@ Climate change is having lasting effects such as changing ocean acidity, tempera
 
 [john aiken, PI](https://expertanalytics.no/about/employees/john/)
 
-[Elliot Dufornet](www.thislinkgoesnowhere.fr)
+[Elliot Dufornet](https://github.com/Elliotdft)
 
 ## Papers
 
