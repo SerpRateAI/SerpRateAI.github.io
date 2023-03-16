@@ -11,6 +11,10 @@ Climate change is having lasting effects such as changing ocean acidity, tempera
 
 [john aiken, PI](https://expertanalytics.no/about/employees/john/)
 
+[Robert Sohn](https://www2.whoi.edu/staff/rsohn/)
+
+[Francois Renard](https://www.mn.uio.no/geo/english/people/aca/crust/francoir/)
+
 [Elliot Dufornet](https://github.com/Elliotdft)
 
 ## Papers
