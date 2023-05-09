@@ -19,10 +19,9 @@ Climate change is having lasting effects such as changing ocean acidity, tempera
 
 ## Collaborating organizations
 
-![Njord Logo](/assets/njord.png)
-![WHOI logo](/assets/whoi.png)
-![Lamont Logo](/assets/lamont.png)
-![uu geosciences logo](/assets/uu.png)
+| ![Njord Logo](/assets/njord.png) | ![WHOI logo](/assets/whoi.png) |
+| -------------------------------- | ------------------------------ |
+| ![Lamont Logo](/assets/lamont.png) | ![uu geosciences logo](/assets/uu.png) |
 
 ## Papers
 
