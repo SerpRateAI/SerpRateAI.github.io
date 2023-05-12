@@ -17,6 +17,16 @@ Climate change is having lasting effects such as changing ocean acidity, tempera
 
 [Elliot Dufornet](https://github.com/Elliotdft)
 
+[Oliver Plümper](https://www.uu.nl/staff/OPlumper)
+
+## Datasets
+
+[Bubble Catalog, coming soon...]()
+
+[Cracking Catalog, coming soon...]()
+
+[BA1B db, coming soon...]()
+
 ## Collaborating organizations
 
 | ![Njord Logo](/assets/njord.png) | ![WHOI logo](/assets/whoi.png) |
