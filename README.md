@@ -27,6 +27,10 @@ Climate change is having lasting effects such as changing ocean acidity, tempera
 
 [BA1B db, coming soon...]()
 
+## Repos
+
+[Core photo analysis](https://github.com/SerpRateAI/core-photo-analysis)
+
 ## Collaborating organizations
 
 | ![Njord Logo](/assets/njord.png) | ![WHOI logo](/assets/whoi.png) |
