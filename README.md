@@ -19,13 +19,6 @@ Climate change is having lasting effects such as changing ocean acidity, tempera
 
 [Oliver Plümper](https://www.uu.nl/staff/OPlumper)
 
-## Datasets
-
-[Bubble Catalog, coming soon...]()
-
-[Cracking Catalog, coming soon...]()
-
-[BA1B db, coming soon...]()
 
 ## Repos
 
