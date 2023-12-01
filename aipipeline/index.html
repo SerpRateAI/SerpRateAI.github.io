@@ -1,0 +1,289 @@
+
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>An AI pipeline for ingesting data collected from a borehole</title>
+
+    <meta name="description" content="aipipe">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <base href="/"> -->
+
+        <!--FACEBOOK-->
+    <meta property="og:image" content="https://serprateai.github.io/aipipeline/img/pipeline.png">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="682">
+    <meta property="og:image:height" content="682">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://serprateai.github.io/aipipeline"/>
+    <meta property="og:title" content="AI-pipeline" />
+    <meta property="og:description" content="Project page for AI-pipeline." />
+
+        <!--TWITTER-->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AI-pipeline" />
+    <meta name="twitter:description" content="Project page for AI-pipeline." />
+    <meta name="twitter:image" content="https://qtransformer.github.io/img/qt_title_overview.png" />
+
+
+<!--     <link rel="apple-touch-icon" href="apple-touch-icon.png"> -->
+  <!-- <link rel="icon" type="image/png" href="img/seal_icon.png"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.css">
+    <link rel="stylesheet" href="css/app.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.8.0/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.3/clipboard.min.js"></script>
+    
+    <script src="js/app.js"></script>
+<!-- Google tag (gtag.js) -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-52J0PM8XKV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-52J0PM8XKV');
+</script>
+	
+    <style>
+        .nav-pills {
+          position: relative;
+          display: inline;
+        }
+        .imtip {
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
+    </style> -->
+</head>
+
+<body>
+    <div class="container" id="main">
+        <div class="row">
+            <h2 class="col-md-12 text-center">
+                <!-- <strong><font size="+6">AI-pipeline: </font></strong> </br> Scalable Offline Reinforcement Learning via Autoregressive Q-Functions </br>  -->
+                An AI pipeline for ingesting data from a borehole
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <ul class="list-inline">
+                <br>
+                    <li>Elliot Dufournet [1]</li> <li>Hamed Amiri [2]</li> <li>Lotta Ternieten [3]</li> <li>Oliver Plumper [2]</li> <li>John M. Aiken* [1, 4]</li>
+                <br>
+		<br>
+                    <a href="https://www.mn.uio.no/njord/english/">
+                    <img src="img/njord.png" height="100px">[1]</a>
+                    <a href="https://www.uu.nl/en">
+                    <img src="img/uu.png" height="50px">[2]</a>
+                    
+                    <a href="https://www.nioz.nl/en">
+                    <img src="img/Logo-NIOZ.png" height="50px">[3]</a>
+                    <a href="https://expertanalytics.no/">
+                    <img src="img/xal.svg" height="75px">Expert Analytics [4]</a>
+                    
+                </ul>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-center">
+                    *Corresponding Author: <a href="https://expertanalytics.no/about/employees/john/">John M. Aiken</a>
+                </p>
+            </div>
+        </div>
+
+
+        <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="assets/qtransformer.pdf">
+                            <image src="img/paper_small.png" height="60px">
+                                <h4><strong>Paper</strong></h4>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="https://github.com/SerpRateAI/AI-pipeline-boreholes">
+                            <image src="img/github-mark.png" height="60px">
+                                <h4><strong>Github</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+		<!-- <p style="text-align:center;">
+	    		<image src="img/qt_animation.gif" class="img-responsive" style="width:100%">
+		</p> -->
+                <h3>
+                    Abstract
+                </h3>
+                <p class="text-justify">
+                    Researchers analyzing data collected from borehole drilling projects can be faced with dozens of terabytes of seismic, hydrologic, geologic, and rock mechanics data, including complex imagery, physical measurements and expert written reports. These diverse data sets play a pivotal role in our understanding of solid earth processes. Ingesting and analysing such data presents a colossal challenge that typically demands a team of experts. The utilization of Artificial Intelligence (AI) and machine learning emerges as a compelling approach to help tackle the volume and complexity of drilling data. This paper presents an AI based pipeline for ingesting data from the Oman Drilling Project's Multi-borehole Observatory. The study focuses on the alteration of peridotite core segments taken from Borehole BA1B, utilizing a catboost classification model trained on an integrated data set of machine learning segmented core images, physical measurements, geological, lithographic data, and AI summarized expert texts and feature selection.  This paper's central objective is to establish a repeatable, efficient pattern for processing such multifaceted borehole data, while also addressing the critical research question of the impact of non-tectonic fracturing on peridotite alteration.                </p>
+            </div>
+        </div>
+
+	<!--
+	<div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Video
+                </h3>
+                <div class="text-center">
+                    <div style="position:relative;padding-top:56.25%;">
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/UuKAp9a6wMs" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+	-->
+
+<div class="row">
+   <div class="col-md-8 col-md-offset-2">
+	<h3>
+	    Approach
+	</h3>
+
+        <p style="text-align:center;">
+            <!-- <image src="img/pipeline.png" class="img-responsive" style="width:95%"> -->
+	    <image src="img/pipeline.png" class="img-responsive">
+            </p>
+	<!-- <p style="text-align:center;">
+		<image src="img/qt_robot_frames.png" class="img-responsive" style="width:70%">
+        </p> -->
+	<p class="text-justify">
+      Drilling expeditions generally produce at least three kinds of raw data: Images taken from borehole cores, drilling reports written by expert geologists identifying various features of each meter of core that comes from the borehole, and physical, chemical, and biological measurements taken using various kinds of equipment inside the borehole. Raw images have their fractures segmented using a random forest classifier trained on hand labeled fracture data (Segment Anything was unable to pick out fractures). 
+    </p>
+    <p class="text-justify">
+      Raw wrap-around core images are first pre-processed using a gaussian, hessian, roberts, and sobel edge enhancing filters. This flattens differences in color content of the image, highlights abrupt changes in edges, making it ultimately easier to pick out fracture veins. Twenty images taken from 20m segments distributed depthwise along the borehole were then labeled using the <a href="https://www.ilastik.org/">Ilastik software</a>. We then used the built-in random forest algorithm within Ilastik to label the remaining 485 images. We drop all labeled pixel groupings with  less than 50 pixels. We then apply a post-processing eccentricity filter to remove small round erroneously labeled pixel groupings as they are not physically representative of a fracture or vein network. This is then considered the final labeled fracture/vein network data set. Using this data set, we calculate the percent fractured per depth, and other <a href="https://www.nature.com/articles/s41598-023-28970-w">fracture network connectivity measurements</a>. These are coupled with other physical, chemical, and biological measurements into the data set.
+      <p style="text-align:center;">
+        <image src="img/physical_measuresments.png" class="img-responsive">
+</p>  
+
+    </p>
+    <p class="text-justify">
+      Drilling reports are summarized into keywords using ChatGPT. Geologist remarks from the drilling report were given to ChatGPT to summarize. These remarks typically take the form of written notes and were taken per approximate meter of extracted core. An example:
+    </p>
+    <p class="text-center">
+    <i>
+        microcrystalline carbonate visible on vein surfaces. clasts are 90\% angular and 10\% rounded. This indicates that the thickness of alluvium is less than few 10s cm and the bedrock is surfacing. angular fragments at 0 to 60 cm with mixed lithologies varying from serpentinised harzburgite to dunite. Serpentinization, oxidation, carbonation in veins.
+    </i>
+</p>
+      <p class="text-justify">
+      Each set of remarks per depth unit (505 in total) were given to ChatGPT (gpt-turbo-3.5) with the prompt:
+      </p>
+      <div class="col-md-offset-1">
+        <p class="text-justify">
+        <i>Please summarize the following text into ten keywords and explain why you picked each key word. The text to summarize: {text}
+        </i>
+    </p>
+    </div>
+    <p class="text-justify">
+      where {text} being replaced by the geologist's remarks. This produced hundreds of different keywords emerged from the process many of which were close duplicates or similar keywords. After filtering keywords for duplicates, similarity, and any keywords that were reported by ChatGPT less than 50 times (representing less than 10% of the BA1B total cored depth), 52 keywords remained. Those keywords were integrated in the dataset as binary variables. Using these keywords, we asked ChatGPT to group the different keywords into topics based on the type of information they convey, and we plotted the graph of keywords depending on depth to have preliminary information about the features of the core.
+    </p>
+    <p style="text-align:center;">
+        <image src="img/topics_keywords.png" class="img-responsive">
+</p>  
+      
+      <p class="text-justify">
+        We asked ChatGPT to classify all model features in the BA1B data set into groups that we could use to separate for model comparison analysis (see Section \ref{sec:catboost}). We excluded the text summarization features already classified since ChatGPT had already seen these. We gave ChatGPT the prompt: 
+      </p>
+      
+      <p class="text-justify">
+      ChatGPT was given the following prompt:
+    </p>
+
+      <!-- <div class="row"> -->
+    
+        <div class="col-md-offset-1">
+            <p class="text-justify">
+            <i>you are an expert physicist, chemist, biologist, and computational scientist ai helper bot. i will give you a list of columns for a catboost classifier. These columns are the features in teh model.  The catboost classifier is designed to determine whether a section of a borehole core has greater than 90% peridotite alteration or not. We are attempting to measure the impact of fractures in the sample against other features that impact the total alteration assuming this is related to reaction driven cracking.
+            <br>
+            You are to first:
+            <li>define each column</li>
+            <li>provide an overarching category for each column</li>
+            <li>describe why you picked this category for the column</li>
+            <br>
+            Features provided to you should be grouped into categories. Please reply saying you understand the task and then i will give you the column names.
+
+            </i>
+        </p>
+        </div>
+
+
+    <!-- </div>
+    </div> -->
+    <p class="text-justify">
+    ChatGPT replied categorizing all of the features into groups (See Section \ref{sec:support} for it's specific reply). These categorizations are then used for model feature selection. We compare these AI selected feature groupings to the expert selected feature groupings (Figure \ref{fig:ROC}).
+    </p>
+</div>
+      
+ 
+<div class="row" id="videos">
+    <div class="col-md-8 col-md-offset-2">
+	<h3>
+	    Results
+	</h3>
+
+    <p class="text-justify">
+        The pipeline is able to ingest all data and then produces two collections of catboost models: 1) expert selected models and 2) GPT recommended models. These both produced groups of ROC curves that demonstrate that the fractures were the least important for predicting where high alteration occurs.
+    </p>
+   
+    <p style="text-align:center;">
+        <image src="img/roc.png" height="300x">
+        <image src="img/roc_using_gpt_classifications.png" height="300px">
+</p>  
+
+    <p class="text-justify">
+        The ChatGPT summarization analysis had two steps, first was the keyword analysis, second was the topic analysis of the selected keywords. Some keywords appear prolifically across the entire depth cross-section (e.g., Serpentine veins, Black Serpentinization, Gabbro). Others have a clear depth dependence either occuring in the upper Dunite sequence (e.g., Irregular, Linneation, Open cracks, Alteration halo) or in the lower Harzburgite sequence (e.g., Hydrothermal, Shearing, Magmatic veins). These keywords generally appear where we would expect them to when referencing the full text reports. ChatGPT was also able to group keywords into meaningful topics of "Veins and alteration", "oxidation and alteration", "structural features", "rock type", "mineralogy", and "physical characteristics".
+    </p>
+
+    <p class="text-justify">
+        This paper has presented an AI-based pipeline to ingest and analyse data from the Oman Drilling Project's Multi-borehole observatory. A random forest image segmentation were used for the treatment of core images, ChatGPT was used to summarize the expert knowledge from the drilling reports, these were coupled with physical, chemical, and biological measurements and used to predict the presence of highly altered peridotites via a catboost model. The catboost model provided valuable outlooks of the main factors influencing peridotite alteration. It indicates textual and physical data such as depth and mineral composition are of primarily importance in the classification, but the network analysis data taken from segmentation represent a suitable alternative and provide acceptable results. Moreover, it shows an AI-based treatment of geological data can equals a physical measurements-oriented method, and is a viable substitute for this classification problem. While this pipeline is particular to the research questions related to the Oman Drilling Project's Borehole BA1B (namely, what is the impact of non-tectonic fracturing of rock on peridotite alteration?), much of the AI based framework presented in this paper is applicable to a great many borehole related data sets.
+    </p>
+    </div>
+</div>
+</div>
+         <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h3>
+                    Citation 
+                </h3>
+                <div class="form-group col-md-10 col-md-offset-1">
+                    <textarea id="bibtex" class="form-control" readonly>
+@inproceedings{qtransformer,
+    title={An AI pipeline for ingesting data from a borehole},
+    authors={Elliot Dufournet and Hamed Amiri and Lotta Ternieten and Oliver Plumper and John M. Aiken},
+    booktitle={Journal of Geophysical Research: Machine Learning and Computation},
+    year={in Review}}</textarea>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p class="text-justify">
+                The website template was borrowed from <a href="http://jonbarron.info/">Jon Barron</a>.
+                </p>
+            </div>
+        </div>
+    <!-- </div> -->
+</body>
+</html>
