@@ -162,3 +162,16 @@ span.highlight {
     padding-right: 10px ;
 }
 
+/* .jumbotron {
+  background-image: url("../assets/serprateai-logo.png");
+  background-size: cover;
+} */
+
+.jumbotron{
+  background: url("../assets/serprateai-logo.png") no-repeat center center; 
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
+  background-size: 100% 100%;
+  background-color: white;
+}

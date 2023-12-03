@@ -71,30 +71,144 @@
 </head>
 
 <body>
+    <!-- <div class="jumbotron jumbotron-fluid"> -->
+    <div class="jumbotron jumbotron-fluid" style="background-image: url(assets/serprateai-logo.png); background-size: 50%;">
+
+        <div class="container">
+            <h1 class><br><br></h1>
+          <!-- <h1 class="display-4">Fluid jumbotron</h1> -->
+          <!-- <p class="lead">This is a modified jumbotron that occupies the entire horizontal space of its parent.</p> -->
+        </div>
+      </div>
+
     <div class="container" id="main">
+        <!-- <div class="row">
+            <div class="col">
+                <p class="text-center">
+                    <img src="assets/serprateai-logo.png" height="150px">
+                </p>
+            </div>
+        </div> -->
         <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
-            <p class="text-center">
-                <img src="assets/serprateai-logo.png" height="150px">
-                <br>
+            <div class="col-md-6 col-md-offset-3">
                 <p class="text-justify">
                     SerpRateAI is a Terratronics AI Labs project funded by the Norwegian Research Council (No. 334395) to investigate the physical mechanisms that drive peridotite alteration.
-
                 </p>
-            </p>
-            <h2 class="col-md-12 text-center">
-                <!-- <strong><font size="+6">SerpRateAI: </font></strong> </br> Scalable Offline Reinforcement Learning via Autoregressive Q-Functions </br>             </h2> -->
             </div>
-            <div class="col-md-2"></div>
+        </div>
+            <div class="row">
+                <div class="col-md-4 col-md-offset-4 text-center">
+                    <ul class="nav nav-pills nav-justified">
+                        <li>
+                            <a href="https://github.com/SerpRateAI/">
+                            <image src="assets/github-mark.png" height="60px">
+                                <h4><strong>Github</strong></h4>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <div class="container" id="body">
+        <div class="row">
+            <div class="col">
+                <h2 class="col-md-10 col-md-offset-2">
+                    Project Summary
+                </h2>
+            </div>
         </div>
         <div class="row">
-            <h2 class="col-md-10 col-md-offset-2 text-justify">
-                Project Partners
-            </h2> 
-            <div class="col-md-12 text-center">
-                    <a href="https://www.mn.uio.no/njord/english/">
+            <div class="col-md-10 col-md-offset-1">
+                <p class="text-center">
+                    <img src="assets/serprateai-process.png" height="500px">
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p class="text-justify">
+                    Climate change is having lasting effects such as changing ocean acidity, temperatures, and heights, increasing the chances of natural hazards such as forest fires and hurricanes, and leading to the disappearance of water sources supplied by glaciers and snow. Carbon dioxide (CO2) produced by humans is a primary contributor to man-made climate change thus finding storage mechanisms for human produced CO2 is necessary to mitigate climate change. Mantle rocks, like peridotite, offer a storage option for CO2, in the presence of water, peridotite will alter into new kinds of rocks. If CO2 is present in the water this CO2 will be stored as a solid in the rocks, keeping it trapped underground forever. Currently this chemical alteration process is well understood however the physical process that allows water to reach unaltered peridotite is not. SerpRateAI will discover the physical processes that allow water to be pumped underground to understand how peridotite alters. Ultimately we will produce natural alteration rates, i.e., how fast the rock changes over time. This can be used to estimate how much CO2 we can store in a region. Given that mantle rocks like peridotite are common, this could feasibly be used to store a large fraction of human produced CO2.
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <p class="text-justify">
+                    We have three step approach:
+                    <ul class="list-group">
+                      <li class="list-group-item"><strong>Work Package 1:</strong> Build time series data sets from acoustics, temperature, pressure, and other loggers deployed into the multi-borehole observatory to explore multiphase fluid flows, cracking events, and other phenomena</li>
+                      <li class="list-group-item"><strong>Work Package 2:</strong> Build depth wise database of geological features found in the multi-borehole observatory including a fracture network database for cored boreholes, summarization of expert reports, and other physical, chemical, and biological measurements to better characterize alteration and it's covariates</li>
+                      <li class="list-group-item"><strong>Work Package 3:</strong> Build AI/ML models that analyse and understand ongoing processes such as carbonation, fluid migration, and cracking</li>
+                    </ul>
+                  </p>  
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2">
+                <h2>
+                    Papers
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-md-8 col-md-offset-2">
+                <p class="text-justify">
+                    <strong>An AI pipeline for ingesting data from a borehole</strong>
+                    <br>
+                    <i>
+                        JGR: Machine Learning and Computation
+                    </i>
+                </p>
+                <textarea id="bibtex" class="form-control" readonly>
+@inproceedings{aiboreholepipeline,
+title={An AI pipeline for ingesting data from a borehole},
+authors={Elliot Dufournet and Hamed Amiri and Lotta Ternieten and Oliver Plumper and John M. Aiken},
+booktitle={Journal of Geophysical Research: Machine Learning and Computation},
+year={in Review}}
+                </textarea>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="form-group col-md-8 col-md-offset-2">
+                <p class="text-justify">
+                    <strong> Gas Migration Episodes Observed During Peridotite Alteration in the Samail Ophiolite, Oman</strong>
+                    <br>
+                    <i>
+                        Geophysical Review Letters
+                    </i>
+                </p>
+                <textarea id="bibtex" class="form-control" readonly>
+@article{bubbles2022,
+author = {Aiken, John M. and Sohn, Robert A. and Renard, François and Matter, Juerg and Kelemen, Peter and Jamtveit, Bjørn},
+title = {Gas Migration Episodes Observed During Peridotite Alteration in the Samail Ophiolite, Oman},
+journal = {Geophysical Research Letters},
+volume = {49},
+number = {21},
+pages = {e2022GL100395},
+keywords = {serpentinization, hydroacoustics, reaction driven cracking, hydrogeology},
+doi = {https://doi.org/10.1029/2022GL100395},
+year = {2022}}
+                </textarea>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <h2 class="col-md-8 col-md-offset-2">
+                Collaborating Partners
+            </h2>
+        </div>
+        <div class="row">
+            <div class="col-md-8 col-md-offset-2 text-center">
+                <a href="https://www.mn.uio.no/njord/english/">
                     <img src="assets/njord.png" height="100px"></a>
                     <a href="https://www.uu.nl/en">
                     <img src="assets/uu.png" height="50px"></a>
@@ -107,156 +221,19 @@
                     <a href="">
                         <img src="assets/xal.svg" height="75px">Expert Analytics
                     </a>
-                    
             </div>
         </div>
-        
-        <!-- <div class="row">
-            <div class="col-md-12">
-                <p class="text-center">
-                    *Corresponding Author: <a href="https://expertanalytics.no/about/employees/john/">John M. Aiken</a>
-                </p>
-            </div>
-        </div> -->
-
-
-        <div class="row">
-                <div class="col-md-4 col-md-offset-4 text-center">
-                    <ul class="nav nav-pills nav-justified">
-
-
-                        <li>
-                            <a href="https://github.com/SerpRateAI/">
-                            <image src="assets/github-mark.png" height="60px">
-                                <h4><strong>Github</strong></h4>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-        </div>
-
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-		<!-- <p style="text-align:center;">
-	    		<image src="img/qt_animation.gif" class="img-responsive" style="width:100%">
-		</p> -->
-                <h3>
-                    Project Summary
-                </h3>
-                <p class="text-center">
-                    <img src="assets/serprateai-process.png" height="500px">
-                </p>
-                <p class="text-justify">
-                    Climate change is having lasting effects such as changing ocean acidity, temperatures, and heights, increasing the chances of natural hazards such as forest fires and hurricanes, and leading to the disappearance of water sources supplied by glaciers and snow. Carbon dioxide (CO2) produced by humans is a primary contributor to man-made climate change thus finding storage mechanisms for human produced CO2 is necessary to mitigate climate change. Mantle rocks, like peridotite, offer a storage option for CO2, in the presence of water, peridotite will alter into new kinds of rocks. If CO2 is present in the water this CO2 will be stored as a solid in the rocks, keeping it trapped underground forever. Currently this chemical alteration process is well understood however the physical process that allows water to reach unaltered peridotite is not. SerpRateAI will discover the physical processes that allow water to be pumped underground to understand how peridotite alters. Ultimately we will produce natural alteration rates, i.e., how fast the rock changes over time. This can be used to estimate how much CO2 we can store in a region. Given that mantle rocks like peridotite are common, this could feasibly be used to store a large fraction of human produced CO2.            </div>
-        </div>
-
-<div class="row">
-   <div class="col-md-8 col-md-offset-2">
-	<h3>
-	    Approach
-	</h3>
-
-        <!-- <p style="text-align:center;"> -->
-            <!-- <image src="img/pipeline.png" class="img-responsive" style="width:95%"> -->
-	    <!-- <image src="img/pipeline.png" class="img-responsive"> -->
-            <!-- </p> -->
-	<!-- <p style="text-align:center;">
-		<image src="img/qt_robot_frames.png" class="img-responsive" style="width:70%">
-        </p> -->
-	<p class="text-justify">
-      We have three step approach:
-      <ul class="list-group">
-        <li class="list-group-item"><strong>Work Package 1:</strong> Building time series data sets from acoustics, temperature, pressure, and other loggers deployed into the multi-borehole observatory</li>
-        <li class="list-group-item"><strong>Work Package 2:</strong> Build depth wise database of geological features found in the multi-borehole observatory including a fracture network database for cored boreholes, summarization of expert reports, and other physical, chemical, and biological measurements</li>
-        <li class="list-group-item"><strong>Work Package 3:</strong> Build AI/ML models that analyse and understand ongoing processes such as carbonation, fluid migration, and cracking</li>
-      </ul>
-    </p>
-    
     </div>
-</div>
-<!-- </div> -->
-         <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <h3>
-                    Papers 
-                </h3>
-                <div class="row">
-                    <div class="form-group col-md-10 col-md-offset-1">
-                        <!-- <div class="col-md-10 col-md-offset-1"> -->
-                            <p class="text-justify">
-                                <strong> 
-                                    AI pipeline for ingesting data from a borehole
-                                </strong> 
-                                <br>
-                                <i>
-                                    JGR: Machine Learning and Computation
-                                </i>
-                            </p>
-                        <textarea id="bibtex" class="form-control" readonly>
-@inproceedings{aiboreholepipeline,
-title={An AI pipeline for ingesting data from a borehole},
-authors={Elliot Dufournet and Hamed Amiri and Lotta Ternieten and Oliver Plumper and John M. Aiken},
-booktitle={Journal of Geophysical Research: Machine Learning and Computation},
-year={in Review}}
-</textarea>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-10 col-md-offset-1">
-                        <!-- <div class="col-md-10 col-md-offset-1"> -->
-                            <p class="text-justify">
-                                <strong> 
-                                    In-situ, acoustic observations of downward migrating breakout swarms in a peridotite borehole
-                                </strong> 
-                                <br>
-                                <i>
-                                    JGR: Solid Earth
-                                </i>
-                            </p>
-                        <textarea id="bibtex" class="form-control" readonly>
-@inproceedings{aiboreholepipeline,
-title={An AI pipeline for ingesting data from a borehole},
-authors={Elliot Dufournet and Hamed Amiri and Lotta Ternieten and Oliver Plumper and John M. Aiken},
-booktitle={Journal of Geophysical Research: Machine Learning and Computation},
-year={in Review}}
-</textarea>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="form-group col-md-10 col-md-offset-1">
-                        <p class="text-justify">
-                            <strong>
-                                Gas Migration Episodes Observed During Peridotite Alteration in the Samail Ophiolite, Oman
-                            </strong>
-                            <br>
-                            <i>
-                                Geophysical Research Letters 
-                            </i>
-                        </p>
-                        <textarea id="bibtex" class="form-control" readonly>
-@article{bubbles2022,
-author = {Aiken, John M. and Sohn, Robert A. and Renard, François and Matter, Juerg and Kelemen, Peter and Jamtveit, Bjørn},
-title = {Gas Migration Episodes Observed During Peridotite Alteration in the Samail Ophiolite, Oman},
-journal = {Geophysical Research Letters},
-volume = {49},
-number = {21},
-pages = {e2022GL100395},
-keywords = {serpentinization, hydroacoustics, reaction driven cracking, hydrogeology},
-doi = {https://doi.org/10.1029/2022GL100395},
-year = {2022}}
-                        </textarea>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
+    <div class="container">
         <div class="row">
             <div class="col-md-8 col-md-offset-2">
-                <p class="text-justify">
+                <p class="text-center">
+                    <br><br>
                 The website template was borrowed from <a href="http://jonbarron.info/">Jon Barron</a>.
+                <br><br><br>
                 </p>
             </div>
         </div>
-    <!-- </div> -->
-</body>
+    </div>
+    </body>
 </html>
